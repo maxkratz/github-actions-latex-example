@@ -33,7 +33,7 @@ jobs:
           echo "Starting LaTeX compiling"
           docker run --rm -v $PWD:/data maxkratz/texlive:2025 latexmk -pdflatex -interaction=nonstopmode
       - name: Upload artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: document
           path: |
